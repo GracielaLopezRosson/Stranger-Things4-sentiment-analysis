@@ -16,7 +16,7 @@ import re
 
 
 def cleaner(tweet):
-    tweet = re.sub("@[A-Za-z0-9]+","",tweet) #Remove @ sign
+    tweet = re.sub("@[A-Za-z0-9]+","", tweet) #Remove @ sign
     tweet = re.sub(r"(?:\@|http?\://|https?\://|www)\S+", "", tweet) #Remove http links
     tweet = " ".join(tweet.split())
     tweet = tweet.replace("#", "").replace("_", " ") #Remove hashtag sign but keep the text
